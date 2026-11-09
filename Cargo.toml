@@ -1,0 +1,29 @@
+[package]
+name = "dcn-notify"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "time", "sync"] }
+rumqttc = { version = "0.25", features = ["websocket"] }
+aes = "0.9"
+cbc = { version = "0.2", features = ["alloc"] }
+base64 = "0.22"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serde_repr = "0.1"
+tray-icon = { version = "0.26", default-features = false, features = ["ksni"] }
+eframe = "0.31"
+egui = "0.31"
+notify-rust = "4"
+open = "5"
+whoami = "2"
+chrono = "0.4"
+image = { version = "0.25", default-features = false, features = ["png"] }
+uuid = { version = "1", features = ["v4", "serde"] }
+anyhow = "1"
+rustls = { version = "0.23", default-features = false, features = ["aws_lc_rs", "tls12", "logging"] }
+crossbeam-channel = "0.5"
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = ">=0.60, <=0.61", features = ["Win32_UI_WindowsAndMessaging", "Win32_Foundation"] }

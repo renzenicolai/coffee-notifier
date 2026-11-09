@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=DCN Notify
+Comment=Tray notifier and event publisher for DCN.Client events
+Exec=/home/renze/dcn/target/release/dcn-notify
+Icon=/home/renze/dcn/icon.png
+Terminal=false
+Categories=Utility;
+StartupNotify=false
+NoDisplay=false
